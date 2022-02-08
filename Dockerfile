@@ -25,7 +25,6 @@ RUN apk --no-cache add ca-certificates libcap && \
     rm -rf /var/cache/apk/* && \
     mkdir -p /opt/conf && \
     chmod -R +x /opt/adguardhome
-    
 RUN setcap 'cap_net_bind_service=+eip' /opt/adguardhome/AdGuardHome
 
 COPY --from=builder /dist/smartdns /smartdns
