@@ -9,7 +9,7 @@ RUN export URL=https://api.github.com/repos/pymumu/smartdns/releases/latest \
     && tar zxvf smartdns.*.tar.gz \
     && mkdir -p /dist/smartdns \
     && mv smartdns/usr/sbin /dist/smartdns \
-    && rm -rf smartdns* 、
+    && rm -rf smartdns*
 
 # step 2
 FROM adguard/adguardhome:latest AS adguardhomeBuilder
